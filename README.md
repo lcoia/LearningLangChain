@@ -1,4 +1,4 @@
-# Learning Lang Chain #
+# Learning LangChain #
 ## Build AI Applications with LLMs
 ### by Mayo Oshin & Nuno Campos
 [Learning LangChain](https://www.amazon.com/Learning-LangChain-Building-Applications-LangGraph/dp/1098167287)
@@ -18,6 +18,13 @@
 
 
 ## LLM Fundamentals with LangChain
+
+We will be using Gradio to build web UIs to launch our applications.
+Be sure to install the library into your environment:
+
+`pip install --upgrade gradio`
+
+For more information, see the [Quickstart](https://www.gradio.app/guides/quickstart) guide.
 
 ## RAG Part I: Indexing Your Data
 
