@@ -25,6 +25,20 @@ Be sure to install the library into your environment:
 `pip install --upgrade gradio`
 
 For more information, see the [Quickstart](https://www.gradio.app/guides/quickstart) guide.
+<br>
+<br>
+
+Install the LangChain libraries.
+
+`pip install langchain langchain-openai langchain-community`
+
+`pip install langchain-text-splitters langchain-postgres`
+<br>
+<br>
+
+Optional libraries.
+
+`pip install langchain-groq`
 
 ## RAG Part I: Indexing Your Data
 
