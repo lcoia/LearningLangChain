@@ -38,8 +38,10 @@ Install the LangChain libraries.
 
 Optional libraries.
 
-`pip install langchain-groq`
 
+`pip install langchain-groq`
+<br>
+<br>
 ## RAG Part I: Indexing Your Data
 
 ## RAG Part II: Chatting with Your Data
