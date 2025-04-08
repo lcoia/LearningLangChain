@@ -13,16 +13,34 @@ OpenAI_model = ChatOpenAI(model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY
 Groq_model = ChatGroq(model="llama3-70b-8192", api_key=os.getenv("GROQ_API_KEY"))
 
 
-response = Groq_model.invoke("The sky is")
+# Call the LLM based on the model selected in the dropdown
+def call_llm(model, prompt_text):
+    print(f"model " + model)
+    match model:
+        case "gpt-4o-mini":
+            llm_response = OpenAI_model.invoke(prompt_text)
+            print(llm_response)
+            return llm_response.content
+        case "llama3-70b-8192":
+            llm_response = Groq_model.invoke(prompt_text)
+            print(llm_response)
+            return llm_response.content
+        case _:
+            return "Error: which model are you using?"
 
 
+# Gradio Blocks for rendering web UI
+#   Text box to enter the prompt.
+#   Dropdown to select the AI model
+#   Submit button to call the LLM
 with gr.Blocks() as demo:
     prompt = gr.Textbox(label="Prompt", lines=7, show_label=True, interactive=True)
     ai_model = gr.Dropdown(
         label="AI Model",
         choices=['gpt-4o-mini', 'llama3-70b-8192'],
         value='llama3-70b-8192', interactive=True)
-    submit_button = gr.Button()
+    submit_button = gr.Button("Submit")
+    output = gr.Textbox(lines=9, show_label=True, label="Output")
+    submit_button.click(call_llm, inputs=[ai_model, prompt], outputs=output)
 
 demo.launch()
-# print(response.content)
