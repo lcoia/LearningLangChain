@@ -15,14 +15,14 @@ Groq_model = ChatGroq(model="llama3-70b-8192", api_key=os.getenv("GROQ_API_KEY")
 
 def call_llm(model, prompt_text):
     """
-    Call the LLM.
+    Call the selected LLM with a prompt and return the response.
 
     Parameters:
     - model: a string
     - prompt_text: a string
 
     Returns:
-    - LLM content
+    - LLM response: a string
     """
     match model:
         case "gpt-4o-mini":
@@ -39,10 +39,10 @@ def call_llm(model, prompt_text):
 
 """
 Gradio Blocks for rendering web UI
-    Text box to enter the prompt.
-    Dropdown to select the AI model
-    Submit button to call the LLM
-    Output test box for displaying LLM output
+    - Text box to enter the prompt.
+    - Dropdown to select the AI model
+    - Submit button to call the LLM
+    - Output text box for displaying LLM output
 """
 with gr.Blocks() as demo:
     prompt = gr.Textbox(label="Prompt", lines=7, show_label=True, interactive=True)
