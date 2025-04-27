@@ -42,6 +42,42 @@ Optional libraries.
 `pip install langchain-groq`
 <br>
 <br>
+
+**Topics**
+1. Chat Message Interfaces
+   - HumanMessage
+   - AIMessage
+   - SystemMessage
+   - ChatMessage
+2. PromptTemplate
+3. Structured Output
+4. Runnable Interface
+
+ 
 ## RAG Part I: Indexing Your Data
+
+**Topics**
+1. Embeddings
+2. Convert Documents to Text
+3. Splitting Text Into Chunks
+4. Generate Text Embeddings
+5. Store Embeddings in a Vector Store
+6. Tracking Changes to Documents
+7. Indexing Optimization
+8. RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval
+9. ColBERT: Optimizing Embeddings
+
+The examples in this chapter require [PGVector](https://github.com/pgvector/pgvector), an open-source vector similarity search from Postgres 
+<br> You will need to install [Docker Desktop](https://docs.docker.com/get-started/get-docker/).<br>
+After installing, run the following command in your terminal.
+
+`docker run \
+    --name pgvector-container \
+    -e POSTGRES_USER=langchain \
+    -e POSTGRES_PASSWORD=langchain \
+    -e POSTGRES_DB=langchain \
+    -p 6024:5432 \
+    -d pgvector/pgvector:pg16`
+
 
 ## RAG Part II: Chatting with Your Data
