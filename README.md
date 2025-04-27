@@ -71,12 +71,12 @@ The examples in this chapter require [PGVector](https://github.com/pgvector/pgve
 <br> You will need to install [Docker Desktop](https://docs.docker.com/get-started/get-docker/).<br>
 After installing, run the following command in your terminal.
 
-`docker run \
-    --name pgvector-container \
-    -e POSTGRES_USER=langchain \
-    -e POSTGRES_PASSWORD=langchain \
-    -e POSTGRES_DB=langchain \
-    -p 6024:5432 \
+`docker run 
+    --name pgvector-container 
+    -e POSTGRES_USER=langchain 
+    -e POSTGRES_PASSWORD=langchain 
+    -e POSTGRES_DB=langchain 
+    -p 6024:5432 
     -d pgvector/pgvector:pg16`
 
 
