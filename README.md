@@ -80,4 +80,5 @@ After installing, run the following command in your terminal.
     -d pgvector/pgvector:pg16`
 
 
+
 ## RAG Part II: Chatting with Your Data
